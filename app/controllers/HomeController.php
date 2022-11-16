@@ -14,8 +14,9 @@ class HomeController
 
     function show(){
         echo "<br>Dentro de show de HomeController";
-        //$product = Product::find($id);
-        //require "views/show.php";
+        $id = $_GET["id"];
+        $product = Product::find($id);
+        require "../app/views/show.php";
 
     }//fin show
 

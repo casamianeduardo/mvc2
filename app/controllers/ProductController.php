@@ -12,13 +12,14 @@ class ProductController
         //echo "<br>Dentro de index de ProductController";
         $products = Product::all();//para acceder a cosas estaticas y constantes se accede con  ::
         require "../app/views/product.php";
+        //require "/app/views/product.php";
     }//fin _index
 
     function show(){
         //echo "<br>sho product controller";
         $id = $_GET["id"];
         $product = Product::find($id);
-        require "views/showproduct.php";
+        require "../app/views/showproduct.php";
 
     }//fin show
 
