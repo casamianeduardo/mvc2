@@ -1,4 +1,5 @@
 <?php
+namespace App\Controllers;
     require_once "../Product.php";
 
 class ProductController
@@ -10,15 +11,15 @@ class ProductController
 
     function index(){
         //echo "<br>Dentro de index de ProductController";
-        $products = Product::all();//para acceder a cosas estaticas y constantes se accede con  ::
+        $products = \Product::all();//para acceder a cosas estaticas y constantes se accede con  ::
         require "../app/views/product.php";
-        //require "/app/views/product.php";
+        
     }//fin _index
 
     function show(){
         //echo "<br>sho product controller";
         $id = $_GET["id"];
-        $product = Product::find($id);
+        $product = \Product::find($id);
         require "../app/views/showproduct.php";
 
     }//fin show

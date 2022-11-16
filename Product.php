@@ -1,4 +1,5 @@
 <?php
+
 //fichero que simula el modelo con datos(bbdd)
     class Product{
         const PRODUCTS = [
